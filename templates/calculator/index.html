@@ -1,0 +1,351 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block metatags%}
+{%endblock%}
+
+{%block style%}
+<link rel="stylesheet" href="{%static 'styles/index.css'%}">
+{%endblock%}
+
+{%block title%}
+<title>Ielts Score Calculator</title>
+{%endblock%}
+
+
+{%block main%}
+
+<section class="gap_">
+<div class="card_container">
+    <h1 class="h_style">What is IELTS Score Calculator?</h1>
+    <p>IELTS Score Calculator is an online tool to calculate your overall band score. It is calculated by taking the average of
+     all 4 modules that is Listening, Reading, Writing and Speaking.
+    </p>
+</div>
+</section>
+
+<section class="gap_">
+        <div class="top_heading_flex">
+            <h1 class="h_style">Calculate your score:</h1>
+            <!-- <h1 class="h_style score_show">Overall Score : <span class="actual_score">9.0</span> </h1> -->
+        </div>
+       
+        <div class="type_container">
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="id_academic" checked>
+            <label class="form-check-label" for="id_academic">
+              Academic
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="id_general">
+            <label class="form-check-label" for="id_general">
+              General
+            </label>
+          </div>
+        </div>
+        <div class="score_details">
+            <div class="module_card">
+                <h2>Listening</h2>
+                <select class="form-select" id="listening_range" aria-label="Default select example">
+                    <option>39-40</option>
+                    <option>37-38</option>
+                    <option>35-36</option>
+                    <option>32-34</option>
+                    <option>30-31</option>
+                    <option>26-29</option>
+                    <option>23-25</option>
+                    <option>18-22</option>
+                    <option>16-17</option>
+                    <option>13-15</option>
+                    <option>11-12</option>
+                </select>
+
+                <select class="form-select input_" id="listening_score" aria-label="Default select example">
+                    <option>9.0</option>
+                    <option>8.5</option>
+                    <option>8.0</option>
+                    <option>7.5</option>
+                    <option>7.0</option>
+                    <option>6.5</option>
+                    <option>6.0</option>
+                    <option>5.5</option>
+                    <option>5.0</option>
+                    <option>4.5</option>
+                    <option>4.0</option>
+                </select>
+                <!-- <input class="form-control input_" value="9.0"> -->
+            </div>
+            <div class="module_card">
+                <h2>Reading</h2>
+                <div class="academic_">
+                    <select class="form-select" id="reading_range_a" aria-label="Default select example">
+                        <option>39-40</option>
+                        <option>37-38</option>
+                        <option>35-36</option>
+                        <option>33-34</option>
+                        <option>30-32</option>
+                        <option>27-29</option>
+                        <option>23-26</option>
+                        <option>19-22</option>
+                        <option>15-18</option>
+                        <option>13-14</option>
+                        <option>10-12</option>
+                        <option>8-9</option>
+                        <option>6-7</option>
+                        <option>4-5</option>
+                    </select>
+
+                    <select class="form-select input_" id="reading_score_a" aria-label="Default select example">
+                        <option>9.0</option>
+                        <option>8.5</option>
+                        <option>8.0</option>
+                        <option>7.5</option>
+                        <option>7.0</option>
+                        <option>6.5</option>
+                        <option>6.0</option>
+                        <option>5.5</option>
+                        <option>5.0</option>
+                        <option>4.5</option>
+                        <option>4.0</option>
+                        <option>3.5</option>
+                        <option>3.0</option>
+                        <option>2.5</option>
+                    </select>
+                </div>
+
+                <div class="general_">
+                    <select class="form-select" id="reading_range_g" aria-label="Default select example">
+                        <option>40</option>
+                        <option>39</option>
+                        <option>37-38</option>
+                        <option>36</option>
+                        <option>34-35</option>
+                        <option>32-33</option>
+                        <option>30-31</option>
+                        <option>27-29</option>
+                        <option>23-26</option>
+                        <option>19-22</option>
+                        <option>15-18</option>
+                        <option>12-14</option>
+                        <option>9-11</option>
+                        <option>6-8</option>
+                    </select>
+
+                    <select class="form-select input_" id="reading_score_g" aria-label="Default select example">
+                        <option>9.0</option>
+                        <option>8.5</option>
+                        <option>8.0</option>
+                        <option>7.5</option>
+                        <option>7.0</option>
+                        <option>6.5</option>
+                        <option>6.0</option>
+                        <option>5.5</option>
+                        <option>5.0</option>
+                        <option>4.5</option>
+                        <option>4.0</option>
+                        <option>3.5</option>
+                        <option>3.0</option>
+                        <option>2.5</option>
+                    </select>
+                </div>
+
+                
+            </div>
+            <div class="module_card">
+                <h2>Writing</h2>
+                <select class="form-select input_" id="writing_score" aria-label="Default select example">
+                    <option>9.0</option>
+                    <option>8.5</option>
+                    <option>8.0</option>
+                    <option>7.5</option>
+                    <option>7.0</option>
+                    <option>6.5</option>
+                    <option>6.0</option>
+                    <option>5.5</option>
+                    <option>5.0</option>
+                    <option>4.5</option>
+                    <option>4.0</option>
+                </select>
+                
+            </div>
+            <div class="module_card">
+                <h2>Speaking</h2>
+                <select class="form-select input_" id="speaking_score" aria-label="Default select example">
+                    <option>9.0</option>
+                    <option>8.5</option>
+                    <option>8.0</option>
+                    <option>7.5</option>
+                    <option>7.0</option>
+                    <option>6.5</option>
+                    <option>6.0</option>
+                    <option>5.5</option>
+                    <option>5.0</option>
+                    <option>4.5</option>
+                    <option>4.0</option>
+                </select>
+            </div>
+        </div>
+</section>
+
+
+<section class="gap_ calculate_score">
+    <button type="button" class="btn btn-primary" id="calculate_">Calculate</button>
+</section>
+
+<section class="gap_ info_">
+    <h1 class="h_style">How does IELTS Score Calculator work?</h1>
+    <p>IELTS Score Calculator is an online tool to calculate your overall band score. It is calculated by taking the average of
+        all 4 modules that is Listening, Reading, Writing and Speaking.
+    </p>
+</section>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" id="popopup" style="display: none;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Your overall band is: <span class="actual_score"></span></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="gap_ faq_">
+    <h1 class="h_style">FAQs</h1>
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              How IELTS modules are scored?
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              What is Academic and General IELTS?
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Is test format same for Academic and General?
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+{%endblock%}
+
+{%block script%}
+<script>
+
+    const academic = document.querySelector(".academic_")
+    const general = document.querySelector(".general_")
+
+    const academic_btn = document.getElementById("id_academic")
+    const general_btn = document.getElementById("id_general")
+
+    const listening_range = document.getElementById("listening_range")
+    const listening_score = document.getElementById("listening_score")
+
+
+    const reading_range_a = document.getElementById("reading_range_a")
+    const reading_score_a = document.getElementById("reading_score_a")
+
+    const reading_range_g = document.getElementById("reading_range_g")
+    const reading_score_g = document.getElementById("reading_score_g")
+
+    const writing_score = document.getElementById("writing_score")
+
+    const speaking_score = document.getElementById("speaking_score")
+
+    var mode = 1
+
+    academic_btn.addEventListener('change',(e)=>{
+        academic.style.display='block'
+        general.style.display='none'
+        mode = 1
+    })
+
+    general_btn.addEventListener('change',(e)=>{
+        academic.style.display='none'
+        general.style.display='block'
+        mode = 0
+    })
+
+    listening_score.addEventListener("change",(e)=>{
+        listening_range.selectedIndex = listening_score.selectedIndex;
+    })
+
+    listening_range.addEventListener('change',(e)=>{
+        listening_score.selectedIndex = listening_range.selectedIndex;
+    })
+
+    reading_score_a.addEventListener("change",(e)=>{
+        reading_range_a.selectedIndex = reading_score_a.selectedIndex;
+    })
+
+    reading_range_a.addEventListener('change',(e)=>{
+        reading_score_a.selectedIndex = reading_range_a.selectedIndex;
+    })
+
+    reading_score_g.addEventListener("change",(e)=>{
+        reading_range_g.selectedIndex = reading_score_g.selectedIndex;
+    })
+    
+    reading_range_g.addEventListener('change',(e)=>{
+        reading_score_g.selectedIndex = reading_range_g.selectedIndex;
+    })
+
+    const calculateFinalScore = ()=>{
+        let listening = listening_score.value
+        let reading = mode ? reading_score_a.value : reading_score_g.value
+        let writing = writing_score.value
+        let speaking = speaking_score.value
+        let overall = (parseFloat(listening)+parseFloat(reading)+parseFloat(writing)+parseFloat(speaking))/4
+
+        var decPart = (overall+"").split(".")
+
+        let firstPart = parseInt(decPart[0])
+        let lastPart = parseFloat('0.'+decPart[1])
+
+        if(lastPart<0.25){
+            document.querySelector(".actual_score").innerText = firstPart+'.0'
+        }
+        if(lastPart>=0.75){
+            document.querySelector(".actual_score").innerText = firstPart+1+'.0'
+        }
+        if(lastPart>=0.25 && lastPart < 0.75 ){
+            document.querySelector(".actual_score").innerText = firstPart+'.5'
+        }
+        document.getElementById("popopup").click()
+    }
+
+    document.getElementById("calculate_").addEventListener('click',calculateFinalScore)
+
+
+</script>
+{%endblock%}

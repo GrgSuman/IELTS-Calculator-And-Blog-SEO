@@ -1,0 +1,72 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {%block metatags%}
+    {%endblock%}
+
+    {%block style%}
+    {%endblock%}
+
+    {%block title%}
+    {%endblock%}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="{%static 'styles/global.css'%}">
+</head>
+<body>
+
+    <nav class="gap_">
+        <section class="heading">
+            <a href="/" class="logo">IELTS CALCULATOR</a>
+            <ul class="nav_list_big">
+                <li><a href="/">Home</a></li>
+                <li>
+                    <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown">Tips</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">Listening</a></li>
+                        <li><a class="dropdown-item" href="#">Reading</a></li>
+                        <li><a class="dropdown-item" href="#">Writing</a></li>
+                        <li><a class="dropdown-item" href="#">Speaking</a></li>
+                      </ul>
+                </li>
+                <li><a href="/">Blog</a></li>
+                <li><a href="/">About Us</a></li>
+            </ul>
+            <!-- <i class="fa-solid fa-bars menu_"></i> -->
+        </section>
+    </nav>
+
+    {%block main%}
+    {%endblock%}
+
+    <div class="gap_ footer_">
+        <footer>
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="#">Home</a></li>
+            <li class="nav-item"><a href="#">Privacy Policy</a></li>
+            <li class="nav-item"><a href="#">Contact</a></li>
+            <li class="nav-item"><a href="#">About</a></li>
+          </ul>
+          <p style="text-align: center;">&copy; <span style="margin-right: 10px;">2022</span> IELTSCALCULATOR.NET</p>
+        </footer>
+      </div>
+
+    {%block script%}
+    {%endblock%}
+
+</body>
+</html>

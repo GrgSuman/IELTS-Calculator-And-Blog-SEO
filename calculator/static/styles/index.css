@@ -1,0 +1,80 @@
+.card_container{
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    margin: 2rem 0;
+    padding: 3rem;
+}
+.h_style{
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.6em;
+}
+.card_container p{
+    line-height: 1.6em;
+}
+.score_details{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    margin: 1rem 0;
+}
+.module_card{
+    padding: 2rem 10%;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+.module_card h2{
+    font-weight: 500;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+.input_{
+    margin: 1rem auto;
+    text-align: center;
+    width: 50%!important;
+}
+.calculate_score{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.calculate_score button{
+    height: 40px;
+    margin: 1rem 0;
+    width: 30%;
+}
+.type_container{
+    display: flex;
+    margin: 0.5rem 0;
+}
+.type_container div{
+    margin-right: 1rem;
+}
+.module_card select{
+    text-align: center;
+}
+.top_heading_flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.score_show{
+    font-size: 2rem;
+}
+.actual_score{
+    font-weight: 700;
+    background: yellow;
+    padding: 0.1rem 0.5rem;
+}
+.general_{
+    display: none;
+}
+.info_{
+    margin: 3rem 0;
+}
+.info_ p{
+    line-height: 1.6em;
+}
+.faq_{
+    margin: 2rem 0;
+    margin-bottom: 4rem;
+}
