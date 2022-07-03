@@ -1,0 +1,109 @@
+.blogMain{
+    margin: 2rem 20%;
+    display: flex;
+}
+.detail_l{
+    flex: 2.5;
+    margin-right: 2.5rem;
+}
+
+.detail_r{
+    flex: 1;
+    height: 100vh;
+    /* ==================untill no ads============ */
+    display: none;
+}
+
+.sideAds{
+    height: 60vh;
+    width: 100%;
+    background: rgb(235 235 235);
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:gray;
+}
+
+.top_bc{
+    display: flex;
+}
+
+.top_bc p{
+    margin: 0 1rem;
+    color: rgba(0, 0, 0, 0.548);
+}
+
+.top_bc span{
+    display: block;
+    margin-right: 1rem;
+    font-size: 0.9rem;
+    color: #212121;
+}
+
+.category_detail{
+    color: #30b4cf;
+    font-weight: 500;
+}
+.c_home{
+    color: #212121;
+}
+.d_title{
+    font-weight: 500;
+    margin: 1rem 0;
+    font-size: 1.8rem;
+}
+
+.featured{
+    width: 100%;
+    margin: 1.5rem 0;
+}
+
+.mainContent p,.mainContent span,.mainContent{
+    font-size: 18px;
+    line-height: 1.8em;
+    text-align: justify;
+  color: #212121;
+}
+.mainContent a{
+    font-size: 18px;
+    line-height: 1.8em;
+    text-align: justify;
+}
+
+.mainContent h1,.mainContent h2,.mainContent h3{
+    font-weight: 500;
+}
+.mainContent h1{
+    font-size: 1.8rem;
+}
+.mainContent h2{
+    font-size: 1.5rem;
+}
+.mainContent h3{
+    font-size: 1.3rem;
+}
+.mainContent img{
+    max-width: 100%;
+}
+
+@media(max-width:1300px){
+    .blogMain{
+        display: block;
+        margin: 2rem 5%;
+    }
+}
+@media(max-width:768px){
+    .blogMain{
+        margin: 2rem 3%;
+    }
+    .detail_l{
+        margin-right: 0;
+    }
+    .d_title{
+        font-size: 1.8rem;
+    }
+    .mainContent p, .mainContent a, .mainContent span, .mainContent {
+        font-size: 1.1rem;
+    }
+}

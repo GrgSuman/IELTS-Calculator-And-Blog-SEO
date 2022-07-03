@@ -22,10 +22,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-&m$1@q0kki0u*kzg_*hy1f_$s1h(4r$yh_m(1fe!z&8v#kxiw7'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# sumangrg
+# @suman@grg111
 
-ALLOWED_HOSTS = []
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = False
+
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,9 +40,24 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'tinymce',
     'calculator',
-    'blog'
 ]
+
+TINYMCE_DEFAULT_CONFIG = {
+    "height": "320px",
+    "width": "960px",
+    "menubar": "file edit view insert format tools table help",
+    "plugins": "advlist autolink lists link image charmap print preview anchor searchreplace visualblocks code "
+    "fullscreen insertdatetime media table paste code help wordcount spellchecker",
+    "toolbar": "undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft "
+    "aligncenter alignright alignjustify | outdent indent |  numlist bullist checklist | forecolor "
+    "backcolor casechange permanentpen formatpainter removeformat | pagebreak | charmap emoticons | "
+    "fullscreen  preview save print | insertfile image media pageembed template link anchor codesample | "
+    "a11ycheck ltr rtl | showcomments addcomment code",
+    "custom_undo_redo_levels": 10,
+    # "language": "es_ES",  # To force a specific language instead of the Django current language.
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -82,6 +100,16 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'ieltscal_ieltscalc',
+#         'USER': 'ieltscal_ieltscalcu',
+#         'PASSWORD': 'a[#S5b{p4)&j',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -123,10 +151,13 @@ STATIC_URL = 'static/'
 MEDIA_URL = '/images/'
 
 #collect static garda
-STATIC_ROOT = '/home2/sumangur/MotivativeQuotes/static/' 
+STATIC_ROOT = '/home2/ieltscal/ieltscalculator/static/' 
 
 #USER UPLOADED CONTENT
 MEDIA_ROOT = BASE_DIR
+
+#media root to public html
+# static ko lagi whitenoise
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

@@ -1,0 +1,55 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block metatags%}
+<meta name="keywords" content="Inspirational and motivational quotes and blogs.">
+<meta name="description" content="Motivative Quotes produces amazing content that motivate you to achieve your goal.">
+
+<meta property="og:url" content="https://ieltscalculator.net/blogs"/>
+<meta property="og:title" content="Inspirational and motivational quotes and blogs." />
+<meta property="og:description" content="Motivative Quotes produces amazing content that motivate you to achieve your goal." />
+<meta property="og:image"  content="https://motivativequotes.com/static/web.jpg"/>
+
+<meta name="twitter:title" content="Inspirational and motivational quotes and blogs.">
+<meta name="twitter:description" content="Motivative Quotes produces amazing content that motivate you to achieve your goal.">
+<meta name="twitter:image" content="https://motivativequotes.com/static/web.jpg">
+<meta name="twitter:card" content="summary_large_image">
+{%endblock%}
+
+{%block style%}
+<link rel="stylesheet" href="{%static 'styles/contact.css'%}">
+{%endblock%}
+
+{%block title%}
+<title>About Us</title>
+{%endblock%}
+
+
+{%block main%}
+<section class="gap_">
+    <h2 class="top_breadcum">Contact Us</h2>
+    <div class="form_cont make_c">
+        <div class="form_">
+            <form action="" method="post">
+                {%csrf_token%}
+                <div>
+                    <p>Name</p>
+                    <input type="text" placeholder="Enter your full name" required name="full_name">
+                </div>
+                <div>
+                    <p>Email</p>
+                    <input type="email" placeholder="Enter your valid email" required name="email">
+                </div>
+                <div>
+                    <p>Message</p>
+                    <textarea required name="message" id="" cols="30" rows="6" placeholder="Your message here.."></textarea>
+                </div>
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+</section>
+{%endblock%}
+
+{%block script%}
+{%endblock%}

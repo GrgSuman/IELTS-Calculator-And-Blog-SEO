@@ -1,0 +1,69 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block metatags%}
+<meta name="keywords" content="Inspirational and motivational quotes and blogs.">
+<meta name="description" content="Motivative Quotes produces amazing content that motivate you to achieve your goal.">
+
+<meta property="og:url" content="https://ieltscalculator.net/blogs"/>
+<meta property="og:title" content="Inspirational and motivational quotes and blogs." />
+<meta property="og:description" content="Motivative Quotes produces amazing content that motivate you to achieve your goal." />
+<meta property="og:image"  content="https://motivativequotes.com/static/web.jpg"/>
+
+<meta name="twitter:title" content="Inspirational and motivational quotes and blogs.">
+<meta name="twitter:description" content="Motivative Quotes produces amazing content that motivate you to achieve your goal.">
+<meta name="twitter:image" content="https://motivativequotes.com/static/web.jpg">
+<meta name="twitter:card" content="summary_large_image">
+{%endblock%}
+
+{%block style%}
+<link rel="stylesheet" href="{%static 'styles/blogDetails.css'%}">
+{%endblock%}
+
+{%block title%}
+<title>About Us</title>
+{%endblock%}
+
+
+{%block main%}
+<!-- <section class="gap_"> -->
+    <div class="blogMain">
+
+        <div class="detail_l">
+            <section class="top_bc">
+                <a href="/" class="category_detail c_home">Home</a>
+                <p>/</p>
+                <a class="category_detail" style="margin-right: 0.5rem;" href="{%url "category" blog.category.slug %}">{{blog.category}}</a>
+            </section>
+    
+            <h1 class="d_title">{{blog.title}}</h1>
+    
+            <section class="top_bc">
+                    <span>{{ blog.createdAt|date:"d F Y" }}</span>
+                    <span>{{blog.author}}</span>
+            </section>
+    
+            <div style="margin: 0 auto;">
+                <img src="{{blog.featuredImage.url}}" alt="{{blog.title}}" class="featured">
+            </div>
+    
+            <div class="mainContent">
+                {{blog.body|safe}}
+            </div>
+    
+    
+        </div>
+    
+        <div class="detail_r">
+         <div class="sideAds">
+             <p>Ads</p>
+         </div>
+        </div>
+    
+    
+    </div>
+<!-- </section> -->
+{%endblock%}
+
+{%block script%}
+{%endblock%}

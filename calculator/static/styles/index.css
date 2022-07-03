@@ -1,7 +1,5 @@
 .card_container{
-    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
     margin: 2rem 0;
-    padding: 3rem;
 }
 .h_style{
     font-weight: 500;
@@ -19,7 +17,7 @@
 }
 .module_card{
     padding: 2rem 10%;
-    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    background: #382f480f;
 }
 .module_card h2{
     font-weight: 500;
@@ -77,4 +75,40 @@
 .faq_{
     margin: 2rem 0;
     margin-bottom: 4rem;
+}
+
+@media(max-width:1300px){
+    .module_card{
+        grid-gap: 5%;
+    }
+}
+
+
+@media(max-width:1024px){
+    .module_card{
+        padding: 1rem 10%;
+    }
+    .score_details{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media(max-width:768px){
+    .score_details{
+        grid-template-columns: 1fr 1fr;
+    }
+    .input_{
+        width: 100%!important;
+    }
+    .score_details{
+        grid-gap: 5%;
+    }
+}
+@media(max-width:450px){
+    .calculate_score button{
+        width: 100%;
+    }
+    .score_details{
+        grid-gap: 3%;
+    }
 }

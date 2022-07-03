@@ -1,0 +1,52 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block metatags%}
+<meta name="keywords" content="Inspirational and motivational quotes and blogs.">
+<meta name="description" content="Motivative Quotes produces amazing content that motivate you to achieve your goal.">
+
+<meta property="og:url" content="https://ieltscalculator.net/blogs"/>
+<meta property="og:title" content="Inspirational and motivational quotes and blogs." />
+<meta property="og:description" content="Motivative Quotes produces amazing content that motivate you to achieve your goal." />
+<meta property="og:image"  content="https://motivativequotes.com/static/web.jpg"/>
+
+<meta name="twitter:title" content="Inspirational and motivational quotes and blogs.">
+<meta name="twitter:description" content="Motivative Quotes produces amazing content that motivate you to achieve your goal.">
+<meta name="twitter:image" content="https://motivativequotes.com/static/web.jpg">
+<meta name="twitter:card" content="summary_large_image">
+{%endblock%}
+
+{%block style%}
+<link rel="stylesheet" href="{%static 'styles/contact.css'%}">
+{%endblock%}
+
+{%block title%}
+<title>About Us</title>
+{%endblock%}
+
+
+{%block main%}
+<section class="gap_">
+    <h2 class="top_breadcum">About Us</h2>
+    <div class="form_cont">
+        <p class="abt_me">
+            I am recent Bachelor's graduate in Computer Science who gave IELTS  examination and got overall band of 8.0.
+            Due to over resources students get confused so I decided to provide a proper guidance to achieve your desired score.
+            Here I will be sharing the tips for 4 different modules plus useful resources.
+            <br>
+            <br>
+            Moreover, I have made a IELTS SCORE CALCULATOR that helps you calculate your overall band score. Not just your score but also your can 
+            check the individual band given a range of obtained score.
+            <br>
+            <br>
+            You can access the calculator by visiting the home page or clicking this link <a href="/">IELTS CALCULATOR.</a>
+            <br>
+            <br>
+            If you have any queries then feel free to <a href="{%url 'contact-us'%}">CONTACT US.</a>
+        </p>
+    </div>
+</section>
+{%endblock%}
+
+{%block script%}
+{%endblock%}
