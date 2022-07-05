@@ -2,17 +2,17 @@
 {%load static%}
 
 {%block metatags%}
-<meta name="keywords" content="Inspirational and motivational quotes and blogs.">
-<meta name="description" content="Motivative Quotes produces amazing content that motivate you to achieve your goal.">
+<meta name="keywords" content="{{blog.keywords}}">
+<meta name="description" content="{{blog.metaDesc}}">
 
 <meta property="og:url" content="https://ieltscalculator.net/blogs"/>
-<meta property="og:title" content="Inspirational and motivational quotes and blogs." />
-<meta property="og:description" content="Motivative Quotes produces amazing content that motivate you to achieve your goal." />
-<meta property="og:image"  content="https://motivativequotes.com/static/web.jpg"/>
+<meta property="og:title" content="{{blog.title}}" />
+<meta property="og:description" content="{{blog.metaDesc}}" />
+<meta property="og:image"  content="https://ieltscalculator.net/{{blog.featuredImage.url}}"/>
 
-<meta name="twitter:title" content="Inspirational and motivational quotes and blogs.">
-<meta name="twitter:description" content="Motivative Quotes produces amazing content that motivate you to achieve your goal.">
-<meta name="twitter:image" content="https://motivativequotes.com/static/web.jpg">
+<meta name="twitter:title" content="{{blog.title}}">
+<meta name="twitter:description" content="{{blog.metaDesc}}">
+<meta name="twitter:image" content="https://ieltscalculator.net/{{blog.featuredImage.url}}">
 <meta name="twitter:card" content="summary_large_image">
 {%endblock%}
 
@@ -21,12 +21,11 @@
 {%endblock%}
 
 {%block title%}
-<title>About Us</title>
+<title>{{blog.title}}</title>
 {%endblock%}
 
 
 {%block main%}
-<!-- <section class="gap_"> -->
     <div class="blogMain">
 
         <div class="detail_l">
@@ -62,7 +61,6 @@
     
     
     </div>
-<!-- </section> -->
 {%endblock%}
 
 {%block script%}

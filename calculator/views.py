@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.shortcuts import redirect, render
-from .models import Blog,Contact
+from .models import Blog,Contact,Category
 from django.core.paginator import Paginator
 from django.views import View
 import random
@@ -11,7 +11,22 @@ def index(request):
 
 class BlogCategoryView(View):
     def get(self,request,blogsCategory):
-        return render(request,"calculator/category-wise-blogs.html")
+        cate = Category.objects.filter(slug=blogsCategory)
+        blog = []
+        myCategory = ""
+        if cate.exists():
+                blog = Blog.objects.filter(category=cate[0].id).filter(postStatus=True).order_by("-id")
+                myCategory = cate[0].name
+
+        paginator = Paginator(blog, 10)
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+
+        context={
+            'blogs':page_obj,
+            'category':myCategory
+        }
+        return render(request,"calculator/category-wise-blogs.html",context)
 
 def AllBlogs(request):
     blog = Blog.objects.all().filter(postStatus=True).order_by('-id')

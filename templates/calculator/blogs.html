@@ -2,17 +2,17 @@
 {%load static%}
 
 {%block metatags%}
-<meta name="keywords" content="Inspirational and motivational quotes and blogs.">
-<meta name="description" content="Motivative Quotes produces amazing content that motivate you to achieve your goal.">
+<meta name="keywords" content="ielts score calculator, calculate listening score, ielts academic score calculator">
+<meta name="description" content="Ieltscalculator helps you by providing useful tips for both academic and general ielts test.">
 
 <meta property="og:url" content="https://ieltscalculator.net/blogs"/>
-<meta property="og:title" content="Inspirational and motivational quotes and blogs." />
-<meta property="og:description" content="Motivative Quotes produces amazing content that motivate you to achieve your goal." />
-<meta property="og:image"  content="https://motivativequotes.com/static/web.jpg"/>
+<meta property="og:title" content="Ielts Score Calculator | Blogs" />
+<meta property="og:description" content="Ieltscalculator helps you by providing useful tips for both academic and general ielts test." />
+<meta property="og:image"  content="https://ieltscalculator.net/calculator.png"/>
 
-<meta name="twitter:title" content="Inspirational and motivational quotes and blogs.">
-<meta name="twitter:description" content="Motivative Quotes produces amazing content that motivate you to achieve your goal.">
-<meta name="twitter:image" content="https://motivativequotes.com/static/web.jpg">
+<meta name="twitter:title" content="Ielts Score Calculator | Blogs">
+<meta name="twitter:description" content="Ieltscalculator helps you by providing useful tips for both academic and general ielts test.">
+<meta name="twitter:image" content="https://ieltscalculator.net/calculator.png">
 <meta name="twitter:card" content="summary_large_image">
 {%endblock%}
 
@@ -21,80 +21,57 @@
 {%endblock%}
 
 {%block title%}
-<title>Ielts Score Calculator | Calculate your overall IELTS Band Score</title>
+<title>Ielts Score Calculator | Blogs</title>
 {%endblock%}
 
 
 {%block main%}
 <section class="gap_">
     <div class="articles">
-    
+        {%for blog in blogs%}
         <article>
-            <a href=""> <img class="art_img" src="https://images.unsplash.com/photo-1648737966968-5f50e6bf9e46?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="{{blog.title}}"></a>
+            <a href="{%url "blog-details" blog.slug%}"> <img class="art_img" src="{{blog.featuredImage.url}}" alt="{{blog.title}}"></a>
             <div class="pad_card">
-                <a href="" class="tags">App Development</a>
-                <a class="title_link" href="">10+ best resources for free stock photos and videos</a> 
+                <a href="{%url "category" blog.category.slug%}" class="tags">{{blog.category}}</a>
+                <a class="title_link" href="{%url "blog-details" blog.slug%}">{{blog.title}}</a> 
                 <p class="views">
-                    <span>Aug 15 2022</span>
+                    <span>{{blog.createdAt|date}}</span>
                     <span class="spacing_">/</span>
                     <span>BY ADMIN</span>
                 </p>
             </div>
         </article>
-    
-        <article>
-            <a href=""> <img class="art_img" src="https://images.unsplash.com/photo-1648737966968-5f50e6bf9e46?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="{{blog.title}}"></a>
-            <div class="pad_card">
-                <a href="" class="tags">App Development</a>
-                <a class="title_link" href="">10+ best resources for free stock photos and videos</a> 
-                <p class="views">
-                    <span>Aug 15 2022</span>
-                    <span class="spacing_">/</span>
-                    <span>BY ADMIN</span>
-                </p>
-            </div>
-        </article>
-    
-        <article>
-            <a href=""> <img class="art_img" src="https://images.unsplash.com/photo-1648737966968-5f50e6bf9e46?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="{{blog.title}}"></a>
-            <div class="pad_card">
-                <a href="" class="tags">App Development</a>
-                <a class="title_link" href="">10+ best resources for free stock photos and videos</a> 
-                <p class="views">
-                    <span>Aug 15 2022</span>
-                    <span class="spacing_">/</span>
-                    <span>BY ADMIN</span>
-                </p>
-            </div>
-        </article>
-    
-    <article>
-        <a href=""> <img class="art_img" src="https://images.unsplash.com/photo-1648737966968-5f50e6bf9e46?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="{{blog.title}}"></a>
-        <div class="pad_card">
-            <a href="" class="tags">App Development</a>
-            <a class="title_link" href="">10+ best resources for free stock photos and videos</a> 
-            <p class="views">
-                <span>Aug 15 2022</span>
-                <span class="spacing_">/</span>
-                <span>BY ADMIN</span>
-            </p>
+        {%empty%}
+        <div>
+        <span>
+            Thanks for your interest 😄. The articles will be uploaded soon.
+        </span>
+        <br>
+        <div style="margin-top: 1.5rem;">
+            <a href="/"><i class="fas fa-arrow-left"></i> Explore Others</a>
         </div>
-    </article>
-    
-    <article>
-        <a href=""> <img class="art_img" src="https://images.unsplash.com/photo-1648737966968-5f50e6bf9e46?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="{{blog.title}}"></a>
-        <div class="pad_card">
-            <a href="" class="tags">App Development</a>
-            <a class="title_link" href="">10+ best resources for free stock photos and videos</a> 
-            <p class="views">
-                <span>Aug 15 2022</span>
-                <span class="spacing_">/</span>
-                <span>BY ADMIN</span>
-            </p>
         </div>
-    </article>
+        {%endfor%}
     </div>
-    </section>
+
+    <div class="pagination">
+        <span class="step-links">
+            {% if blogs.has_previous %}
+                <a href="?page=1"> First</a>
+                <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+            {% endif %}
+      
+            <a href="#" class="current" style="background: #6b3b3b8c;">
+                 {{ blogs.number }} of {{ blogs.paginator.num_pages }}
+            </a>
+      
+            {% if blogs.has_next %}
+                <a href="?page={{ blogs.next_page_number }}">Next</a>
+                <a href="?page={{ blogs.paginator.num_pages }}">Last</a>
+            {% endif %}
+        </span>
+      </div>
+</section>
 {%endblock%}
 
 {%block script%}

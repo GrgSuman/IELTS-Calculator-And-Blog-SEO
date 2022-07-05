@@ -4,6 +4,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 2rem;
     padding: 2rem 0;
+    min-height: 70vh;
 }
 
 .pad_card{
@@ -63,6 +64,32 @@
   margin: 0 0.6rem;
 }
 /* ======================card ends======================================== */
+
+
+/* =============pagination====================== */
+.pagination{
+    width: 100%;
+    padding: 1rem;
+    color: #f3f3f3;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+  }
+  .pagination a{
+    color: #f3f3f3;
+    background: #202020;
+    text-decoration: none;
+    display: block;
+    margin:0 0.5rem;
+    padding:0.5rem 1rem;
+    border-radius: 5px;
+    }
+    .pagination a:hover{
+    background: #6b3b3b8c;
+    }
+    .step-links{
+      display: flex;
+      justify-content: center;
+}
 
 @media(max-width:1300px){
     .articles{

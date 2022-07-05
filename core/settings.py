@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-&m$1@q0kki0u*kzg_*hy1f_$s1h(4r$yh_m(1fe!z&8v#kxiw7
 # @suman@grg111
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -40,9 +40,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+     'django.contrib.sites',
+    'django.contrib.sitemaps',  
     'tinymce',
     'calculator',
 ]
+
+SITE_ID = 1
+
 
 TINYMCE_DEFAULT_CONFIG = {
     "height": "320px",

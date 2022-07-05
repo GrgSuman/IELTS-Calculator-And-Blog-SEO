@@ -85,6 +85,7 @@
 }
 .mainContent img{
     max-width: 100%;
+    height: fit-content;
 }
 
 @media(max-width:1300px){
